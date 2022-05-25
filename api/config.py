@@ -1,0 +1,3 @@
+class Config(object):
+    TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJGYWN0b3J5IiwiVXNlcm5hbWUiOiJzb2NjZXJiZXQiLCJleHAiOjE2NTUxOTg2ODksImlhdCI6MTYyMzY2MjY4OX0.6xj5ZW_DR5ZQ70eD0PmxcePJXkOxYK_cPs_wMbKk1PE' 
+    IP = '127.0.0.1'

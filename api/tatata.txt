@@ -1,0 +1,25 @@
+SELECT username, SlipUserId, date, numlines, brojtiketa, fudbalsumbet,fudbalsumwin,fudbalbrojtiketa
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-04" and sliptype=0
+            group by username;
+            SELECT username, slipuserid, sum(numlines), sum(brojtiketa), sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-04" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines), sum(brojtiketa), sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-04" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines), sum(brojtiketa), sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-04" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines), sum(brojtiketa), sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-04" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines), sum(brojtiketa), sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-03" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines) as 'numlines', sum(brojtiketa) as 'brojtiketa', sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-03" and sliptype=0
+            group by username, slipuserid;
+            SELECT username, slipuserid, sum(numlines) as 'numlines', sum(brojtiketa) as 'brojtiketa', sum(fudbalsumbet),sum(fudbalsumwin),sum(fudbalbrojtiketa)
+            from StatisticUserReport where date>"2021-12-01" and date<"2021-12-03" and sliptype=0
+            group by username, slipuserid;
+            ('BICA34', '42815ADF-652E-44C6-805E-00015BADD643', Decimal('36'), Decimal('5'), 0.0, 0.0, Decimal('0'))

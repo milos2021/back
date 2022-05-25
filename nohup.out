@@ -1,0 +1,72 @@
+ * Serving Flask app "run" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 308-611-786
+ * Serving Flask app "run" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 308-611-786
+10.0.160.1 - - [16/Mar/2021 15:28:14] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:20] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:20] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:21] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:22] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:22] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:23] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:23] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:24] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:25] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:25] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:26] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:29] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:30] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:31] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:32] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:32] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:33] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:34] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:35] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:36] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:36] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:37] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:39] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:28:40] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "run" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 308-611-786
+10.0.160.1 - - [16/Mar/2021 15:29:29] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "run" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 293-108-316
+10.0.160.1 - - [16/Mar/2021 15:48:55] "[37mGET / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:48:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+10.0.160.1 - - [16/Mar/2021 15:51:20] "[37mOPTIONS / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:51:26] "[37mPOST / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:51:34] "[37mOPTIONS / HTTP/1.1[0m" 200 -
+10.0.160.1 - - [16/Mar/2021 15:51:40] "[37mPOST / HTTP/1.1[0m" 200 -
+ * Detected change in '/home/milos/api/views.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 293-108-316

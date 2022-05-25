@@ -1,0 +1,282 @@
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 26, in <module>
+    risk = pd.read_csv("risk_per_competition.csv")
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/parsers/base_parser.py", line 222, in _open_handles
+    self.handles = get_handle(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/io/common.py", line 702, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'risk_per_competition.csv'
+2022-03-12 08:00:00.000
+2022-03-17 15:56:01.663
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.Error: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: Error code 0x68 (104) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 36, in <module>
+    result = conn.execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in execute
+    return self._exec_driver_sql(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1546, in _exec_driver_sql
+    ret = self._execute_context(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: Error code 0x68 (104) (SQLExecDirectW)')
+[SQL: exec dbo.m_prematchLoadMain @from="2022-03-20 08:00:00.000", @to="2022-03-25 14:24:02.545"]
+(Background on this error at: http://sqlalche.me/e/14/dbapi)
+Exception ignored in: <function Db.__del__ at 0x7fee567544c0>
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/db.py", line 23, in __del__
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1147, in close
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 1015, in close
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 865, in _checkin
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 648, in _finalize_fairy
+TypeError: 'NoneType' object is not callable
+Exception ignored in: <function _ConnectionRecord.checkout.<locals>.<lambda> at 0x7fee4b90e940>
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 437, in <lambda>
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 717, in _finalize_fairy
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 472, in checkin
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 316, in _return_conn
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 113, in _do_return_conn
+TypeError: catching classes that do not inherit from BaseException is not allowed
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+pyodbc.Error: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: Error code 0x68 (104) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 36, in <module>
+    result = conn.execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1247, in execute
+    return self._exec_driver_sql(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1546, in _exec_driver_sql
+    ret = self._execute_context(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DBAPIError: (pyodbc.Error) ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: Error code 0x68 (104) (SQLExecDirectW)')
+[SQL: exec dbo.m_prematchLoadMain @from="2022-03-24 08:00:00.000", @to="2022-03-29 10:20:02.236"]
+(Background on this error at: http://sqlalche.me/e/14/dbapi)
+Exception ignored in: <function Db.__del__ at 0x7f7f34f474c0>
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/db.py", line 23, in __del__
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1147, in close
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 1015, in close
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 865, in _checkin
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 648, in _finalize_fairy
+TypeError: 'NoneType' object is not callable
+Exception ignored in: <function _ConnectionRecord.checkout.<locals>.<lambda> at 0x7f7f2a101940>
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 437, in <lambda>
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 717, in _finalize_fairy
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 472, in checkin
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 316, in _return_conn
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 113, in _do_return_conn
+TypeError: catching classes that do not inherit from BaseException is not allowed
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 517, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Lock wait timeout exceeded; try restarting transaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 70, in <module>
+    mycursor.execute(sql)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/cursor_cext.py", line 270, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.DatabaseError: 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 517, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Lock wait timeout exceeded; try restarting transaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 70, in <module>
+    mycursor.execute(sql)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/cursor_cext.py", line 270, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.DatabaseError: 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 517, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Lock wait timeout exceeded; try restarting transaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 70, in <module>
+    mycursor.execute(sql)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/cursor_cext.py", line 270, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.DatabaseError: 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 517, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Lock wait timeout exceeded; try restarting transaction
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  FTraceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 517, in cmd_query
+    self._cmysql.query(query,
+_mysql_connector.MySQLInterfaceError: Lost connection to MySQL server during query
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 70, in <module>
+    mycursor.execute(sql)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/cursor_cext.py", line 270, in execute
+    result = self._cnx.cmd_query(stmt, raw=self._raw,
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    raise errors.get_mysql_exception(exc.errno, msg=exc.msg,
+mysql.connector.errors.OperationalError: 2013 (HY000): Lost connection to MySQL server during query
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3211, in _wrap_pool_connect
+    return fn()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 28, in <module>
+    db = Db()
+  File "/home/milos/reporting/api/db.py", line 20, in __init__
+    self.connection = self.engine.connect()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3165, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3244, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3214, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2068, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 3211, in _wrap_pool_connect
+    return fn()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Exception ignored in: <function Db.__del__ at 0x7f2e947f7430>
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/db.py", line 23, in __del__
+AttributeError: 'Db' object has no attribute 'connection'
+Traceback (most recent call last):
+  File "/home/milos/reporting/api/cron_prematch_load.py", line 64, in <module>
+    alerts = podaciDf.groupby(['Match ID', 'Start', 'CompetitionId'])['TotalImpactSumBet'].sum().reset_index()
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/core/frame.py", line 7631, in groupby
+    return DataFrameGroupBy(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/core/groupby/groupby.py", line 889, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/home/milos/reporting/api/soccerenv/lib/python3.8/site-packages/pandas/core/groupby/grouper.py", line 862, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'Match ID'
